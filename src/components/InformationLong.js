@@ -1,5 +1,4 @@
 import React from 'react';
-import mockup3 from '../assets/mockup3.svg';
 
 function InformationLong() {
   return (
