@@ -10,7 +10,7 @@ function Information() {
           <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus iaculis urna id volutpat lacus laoreet. Eget lorem dolor sed viverra ipsum.</p>
           {/* Ensure button is left-aligned by wrapping in a div with text-left class if needed */}
           <div className="text-left">
-            <a href="#" style={{ backgroundColor: '#171c84' }} className="inline-flex items-center text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:focus:ring-primary-900">
+            <a  style={{ backgroundColor: '#171c84' }} className="inline-flex items-center text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:focus:ring-primary-900">
               Get started
               <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
