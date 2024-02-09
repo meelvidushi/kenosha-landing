@@ -5,9 +5,7 @@ import model from '../assets/model.svg'; // Import the model image
 
 function Hero() {
   // Function to handle navigation
-  const navigateTo = (url) => {
-    window.location.href = url;
-  };
+
 
   return (
     <div 
