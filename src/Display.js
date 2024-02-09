@@ -6,12 +6,14 @@ import Footer from './components/Footer';
 import CTA from './components/CTA';
 import InformationLong from './components/InformationLong';
 import Contact from './components/Contact';
+import Landing from './components/Landing';
 
 
 function Display() {
   return (
     <div className="bg-slate-50">
 <Header />
+<Landing></Landing>
       <Hero /> {/* Render the Hero component */}
       <InformationLong></InformationLong>
 
