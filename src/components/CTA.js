@@ -20,7 +20,7 @@ function CTA() {
           <div className="text-left">
             <button
               type="button"
-              onClick={navigateTo}
+              onClick={() => navigateTo('https://kenosha.ai')}
               style={{ backgroundColor: '#171c84' }}
               className="inline-flex items-center text-white hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:focus:ring-primary-900"
             >
