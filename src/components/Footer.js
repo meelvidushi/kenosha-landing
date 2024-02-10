@@ -6,6 +6,14 @@ const navigate = (url) => {
   window.location.href = url;
 };
 
+const scrollToSection = (sectionId) => {
+  const section = document.querySelector(sectionId);
+  if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
+
 function Footer() {
   return (
     <footer className="px-4 lg:px-6 py-4 dark:bg-gray-800" style={{ backgroundColor: '#171c84' }}> {/* Updated background color */}
@@ -33,9 +41,9 @@ function Footer() {
             <li>
               <button
                 type="button"
-                className="text-white  hover:no-underline focus:outline-none"
-                onClick={() => navigate('https://kenosha.ai')}
-              >
+                className="text-white  hover:underline focus:outline-none"
+                onClick={() => scrollToSection('#contact')}
+                >
                 Contact
               </button>
             </li>

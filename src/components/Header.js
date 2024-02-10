@@ -7,6 +7,14 @@ function Header() {
     window.location.href = url;
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
+
   return (
     <header>
       <nav className="px-4 lg:px-6 py-4 dark:bg-gray-800" style={{ backgroundColor: '#171c84' }}> {/* Updated background color */}
@@ -17,18 +25,13 @@ function Header() {
             <div className="flex items-center gap-2">
               {/* Contact button aligned to the right */}
               <button
-                onClick={() => navigateTo('https://kenosha.ai')}
-                className="text-gray-800 dark:text-gray-900 bg-slate-50 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-200 focus:outline-none dark:focus:ring-gray-300 transition-colors duration-150"
-              >
-                  Contact
-              </button>
-              {/* Join Waitlist button */}
-              <button
-                onClick={() => navigateTo('https://kenosha.ai')}
-                className="border border-slate-50 text-white hover:bg-slate-100 hover:text-gray-800 focus:ring-4 focus:ring-slate-100 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none transition-colors duration-150"
-              >
-                  Join Waitlist
-              </button>
+  onClick={() => scrollToSection('#contact')}
+  className="inline-flex items-center justify-center bg-slate-50 px-5 py-3 text-base font-medium text-center text-slate-900 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+>
+  Contact
+</button>
+
+           
             </div>
         </div>
       </nav>
