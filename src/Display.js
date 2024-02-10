@@ -17,8 +17,6 @@ function Display() {
       <Hero /> {/* Render the Hero component */}
       <InformationLong></InformationLong>
       <Team/>
-      {/*<Information></Information>
-      <CTA></CTA>*/}
       <Contact></Contact>
       <Footer></Footer>
      </div>

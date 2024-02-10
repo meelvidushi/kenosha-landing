@@ -29,15 +29,7 @@ function Footer() {
                 About
               </button>
             </li>
-            <li>
-              <button
-                type="button"
-                className="text-white  hover:underline me-4 md:me-6 focus:outline-none"
-                onClick={() => navigate('https://kenosha.ai')}
-              >
-                Privacy Policy
-              </button>
-            </li>
+          
             <li>
               <button
                 type="button"
