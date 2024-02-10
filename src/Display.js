@@ -7,7 +7,7 @@ import CTA from './components/CTA';
 import InformationLong from './components/InformationLong';
 import Contact from './components/Contact';
 import Landing from './components/Landing';
-
+import Team from './components/Team';
 
 function Display() {
   return (
@@ -16,9 +16,9 @@ function Display() {
 <Landing></Landing>
       <Hero /> {/* Render the Hero component */}
       <InformationLong></InformationLong>
-
-      <Information></Information>
-      <CTA></CTA>
+      <Team/>
+      {/*<Information></Information>
+      <CTA></CTA>*/}
       <Contact></Contact>
       <Footer></Footer>
      </div>
