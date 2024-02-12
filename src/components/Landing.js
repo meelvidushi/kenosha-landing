@@ -1,5 +1,5 @@
 import React from 'react';
-import mockup2 from '../assets/mockup2.svg'; // Import the dashboard mockup image
+import modelnew2 from '../assets/modelnew2.png'; // Import the dashboard mockup image
 
 const scrollToSection = (sectionId) => {
   const section = document.querySelector(sectionId);
@@ -32,8 +32,9 @@ function Landing() {
           </div> 
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img className="mx-auto mb-2 lg:mb-4 w-full" src={mockup2} alt="dashboard overview" />
-          </div>                
+    <img className="mx-auto mb-2 lg:mb-4 w-full shadow-md" src={modelnew2} alt="dashboard overview" />
+</div>
+       
       </div>
     </section>
   );
