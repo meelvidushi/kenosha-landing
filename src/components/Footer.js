@@ -13,7 +13,6 @@ const scrollToSection = (sectionId) => {
   }
 };
 
-
 function Footer() {
   return (
     <footer className="px-4 lg:px-6 py-4 dark:bg-gray-800" style={{ backgroundColor: '#171c84' }}> {/* Updated background color */}
@@ -22,7 +21,7 @@ function Footer() {
           {/* Changed to button for logo with navigation, styled with Tailwind */}
           <button
             type="button"
-            className="flex items-center text-white  hover:underline focus:outline-none"
+            className="flex items-center text-white hover:underline focus:outline-none"
             onClick={() => navigate('https://kenosha.ai')}
           >
             <img src={LogoImageDark} className="mr-3 h-12 sm:h-12" alt="Kenosha AI Logo" />
@@ -31,26 +30,35 @@ function Footer() {
             <li>
               <button
                 type="button"
-                className="text-white  hover:underline me-4 md:me-6 focus:outline-none"
+                className="text-white hover:underline me-4 md:me-6 focus:outline-none"
                 onClick={() => navigate('https://kenosha.ai')}
               >
                 About
               </button>
             </li>
-          
             <li>
               <button
                 type="button"
-                className="text-white  hover:underline focus:outline-none"
+                className="text-white hover:underline me-4 md:me-6 focus:outline-none"
                 onClick={() => scrollToSection('#contact')}
-                >
+              >
                 Contact
+              </button>
+            </li>
+            {/* LinkedIn button */}
+            <li>
+              <button
+                type="button"
+                className="text-white hover:underline me-4 md:me-6 focus:outline-none"
+                onClick={() => navigate('https://www.linkedin.com/company/kenosha-ai/about/')}
+              >
+                LinkedIn
               </button>
             </li>
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-slate-50 sm:text-center">© 2023 Kenosha AI™. All Rights Reserved.</span>
+        <span className="block text-sm text-slate-50 sm:text-center">© 2024 Kenosha AI™. All Rights Reserved.</span>
       </div>
     </footer>
   );
