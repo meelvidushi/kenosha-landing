@@ -1,3 +1,11 @@
+FROM node:20-slim AS builder
+
+WORKDIR /app
+COPY . /app
+
+RUN npm i
+RUN npm run build
+
 # Use the official Nginx image as the base
 FROM nginx:alpine
 
@@ -8,7 +16,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY custom.conf /etc/nginx/conf.d/
 
 # Copy the static content (index.html and other files)
-COPY build /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html 
 
 # Expose port 80
 EXPOSE 80
