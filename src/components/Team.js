@@ -1,45 +1,62 @@
 import React from 'react';
 import brad from "../assets/brad.jpeg";
 import bill from "../assets/bill.jpeg";
+import linkedin from "../assets/linkedin.svg";
+
+const TeamMemberCard = ({ name, title, description, imageUrl, profileUrl }) => {
+  return (
+    <div
+      className="group bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden relative"
+      aria-label={`View ${name}'s profile`}
+    >
+      <div className="relative">
+        <img className="w-full h-48 object-cover sm:h-56 md:h-64 lg:h-72 xl:h-80" src={imageUrl} alt={`${name}'s Avatar`} />
+        {/* Overlay with dynamic shadow color on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-transparent group-hover:from-[#171C84] group-hover:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></div>
+      </div>
+      <div className="p-5">
+        <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h3>
+        <span className="text-gray-500 dark:text-gray-400 block mb-3">{title}</span>
+        <p className="text-gray-500 dark:text-gray-400 hidden group-hover:block">{description}</p>
+        <a href={profileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-500 hover:text-blue-400 mt-4">
+          <img src={linkedin} alt="LinkedIn" className="w-5 h-5 mr-2" />View LinkedIn Profile
+        </a>
+      </div>
+    </div>
+  );
+};
+
 
 function Team() {
-
-  // Function to navigate to URL
-  const navigateTo = (url) => {
-    window.location.href = url;
-  };
+  // Team members' data
+  const teamMembers = [
+    {
+      name: "Bill Kish",
+      title: "CEO & Co-Founder",
+      description: "Bill has over 30 years of experience at five successful startups, and is an accomplished technologist who has served as founding engineer, CEO, and CTO at startups and publicly traded companies that grew to over five billion in market cap.",
+      imageUrl: bill,
+      profileUrl: "https://www.linkedin.com/in/billkish/",
+    },
+    {
+      name: "Brad Pruitt, M.D.",
+      title: "President & Co-Founder",
+      description: "Brad has over 25 years of experience in clinical research and healthcare, and 13 years in the CRO industry including as a startup founder/CEO and as an executive medical director at top-10 CROs working with global sales and proposal teams.",
+      imageUrl: brad,
+      profileUrl: "https://www.linkedin.com/in/bradpruitt/",
+    },
+  ];
 
   return (
-<section className="bg-white dark:bg-gray-900">
-  <div className="px-4 py-8 sm:p-12 lg:p-16 mx-auto max-w-screen-xl">
-    <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-      <h2 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
-      <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Kenosha AI was founded by Brad Pruitt, M.D., and Bill Kish. Together, they are leveraging the rapidly accelerating power of GPT-class AI to automate RFP responses and perform other CRO operational tasks that were impossible just months ago.</p>
-    </div> 
-    <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-1">
-      {/* Bill's Card */}
-      <div onClick={() => navigateTo('https://www.linkedin.com/in/billkish/')} className="bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-center hover:bg-slate-100 cursor-pointer">
-        <img className="w-full sm:w-1/3 rounded-t-lg sm:rounded-none sm:rounded-l-lg p-2" src={bill} alt="Bill's Avatar" />
-        <div className="p-5 text-center sm:text-left">
-          <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Bill Kish</h3>
-          <span className="text-gray-500 dark:text-gray-400">CEO & Co-Founder</span>
-          <p className="mt-4 text-gray-500 dark:text-gray-400">Bill has over 30 years of experience at five successful startups, and is an accomplished technologist who has served as founding engineer, CEO, and CTO at startups and publicly traded companies that grew to over five billion in market cap.</p>
+    <section id="team" className="bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 py-8 sm:p-12 lg:p-16">
+        <h2 className="text-center text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-8 lg:mb-16">Our Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {teamMembers.map(member => (
+            <TeamMemberCard key={member.name} {...member} />
+          ))}
         </div>
       </div>
-
-      {/* Brad's Card */}
-      <div onClick={() => navigateTo('https://www.linkedin.com/in/bradpruitt/')} className="bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-center hover:bg-slate-100 cursor-pointer">
-        <img className="w-full sm:w-1/3 rounded-t-lg sm:rounded-none sm:rounded-l-lg p-2" src={brad} alt="Brad's Avatar" />
-        <div className="p-5 text-center sm:text-left">
-          <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Brad Pruitt, M.D.</h3>
-          <span className="text-gray-500 dark:text-gray-400">President & Co-Founder</span>
-          <p className="mt-4 text-gray-500 dark:text-gray-400">Brad has over 25 years of experience in clinical research and healthcare, and 13 years in the CRO industry including as a startup founder/CEO and as an executive medical director at top-10 CROs working with global sales and proposal teams.</p>
-        </div>
-      </div>
-    </div>  
-  </div>
-</section>
-
+    </section>
   );
 }
 

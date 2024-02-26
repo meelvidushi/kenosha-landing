@@ -29,27 +29,23 @@ function Header() {
           </div>
           <div className={`flex-col md:flex-row md:flex ${isMenuOpen ? 'flex' : 'hidden'}`}>
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+          
+<button
+  type="button"
+  className="text-white hover:underline hover:text-blue-200 focus:outline-none transition-colors duration-150"
+  onClick={() => scrollToSection('#information-long')}
+>
+  Solutions
+</button>
+
               <button
                 type="button"
                 className="text-white hover:underline hover:text-blue-200 focus:outline-none transition-colors duration-150"
-                onClick={() => navigateTo('https://kenosha.ai')}
+                onClick={() => scrollToSection('#team')}
               >
-                About
+                Team
               </button>
-              <button
-                type="button"
-                className="text-white hover:underline hover:text-blue-200 focus:outline-none transition-colors duration-150"
-                onClick={() => scrollToSection('#contact')}
-              >
-                Contact
-              </button>
-              <button
-                type="button"
-                className="text-white hover:underline hover:text-blue-200 focus:outline-none transition-colors duration-150"
-                onClick={() => navigateTo('https://www.linkedin.com/company/kenosha-ai/about/')}
-              >
-                LinkedIn
-              </button>
+             
               <button
                 onClick={() => scrollToSection('#contact')}
                 className="bg-white text-slate-900 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 transition-colors duration-150"

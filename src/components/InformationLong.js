@@ -13,11 +13,10 @@ function InformationLong() {
     };
 
   return (
-    <section className="bg-slate-100 dark:bg-gray-900">
+<section id="information-long" className="bg-slate-100 dark:bg-gray-900">
       <div className="px-4 py-8 sm:p-8 md:p-12 lg:p-16">
         <div className="mx-auto max-w-screen-xl text-center">
           <h2 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white transition duration-500 ease-in-out hover:text-blue-500">Customers Rely on Kenosha AI for:</h2>
-          <p className="text-gray-500 sm:text-lg dark:text-gray-400 mb-10">Here are a few reasons why you should try Kenosha AI</p>
           <div className="mt-8 space-y-8 md:space-y-0 md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-lg">
                   <img src={bullseye} alt="AI-powered Proposal Generation" className="mx-auto mb-4 w-16 h-16" />
