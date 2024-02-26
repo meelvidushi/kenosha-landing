@@ -11,7 +11,6 @@ const TeamMemberCard = ({ name, title, description, imageUrl, profileUrl }) => {
     >
       <div className="relative">
         <img className="w-full h-48 object-cover sm:h-56 md:h-64 lg:h-72 xl:h-80" src={imageUrl} alt={`${name}'s Avatar`} />
-        {/* Overlay with dynamic shadow color on hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-transparent group-hover:from-[#171C84] group-hover:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></div>
       </div>
       <div className="p-5">
@@ -50,7 +49,7 @@ function Team() {
     <section id="team" className="bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 py-8 sm:p-12 lg:p-16">
         <h2 className="text-center text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-8 lg:mb-16">Our Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {teamMembers.map(member => (
             <TeamMemberCard key={member.name} {...member} />
           ))}

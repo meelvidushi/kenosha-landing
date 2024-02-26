@@ -1,5 +1,6 @@
 import React from 'react';
 import LogoImageDark from '../assets/brand-images/LogoLong-DarkMode@2x.png';
+import linkedin from '../assets/linkedin.svg'; // Ensure this path is correct
 
 const navigate = (url) => {
   window.location.href = url;
@@ -43,14 +44,20 @@ function Footer() {
                 Team
               </button>
             </li>
-            <li className="my-2 sm:my-0">
-              <button
-                type="button"
-                className="text-white hover:underline me-4 md:me-6 focus:outline-none"
-                onClick={() => navigate('https://www.linkedin.com/company/kenosha-ai/about/')}
-              >
-                LinkedIn
-              </button>
+            <li className="my-0">
+            <button
+  type="button"
+  className="focus:outline-none"
+  onClick={() => navigate('https://www.linkedin.com/company/kenosha-ai/about/')}
+>
+  <img
+    src={linkedin}
+    alt="LinkedIn"
+    className="h-4 w-4 filter invert" // Added filter invert to make the image appear white
+    style={{ filter: 'invert(100%)' }} // This CSS filter inverts the colors, making black appear white
+  />
+</button>
+
             </li>
           </ul>
         </div>
