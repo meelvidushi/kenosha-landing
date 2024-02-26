@@ -13,33 +13,47 @@ function InformationLong() {
     };
 
   return (
-<section id="information-long" className="bg-slate-100 dark:bg-gray-900">
-      <div className="px-4 py-8 sm:p-8 md:p-12 lg:p-16">
+    <section id="information-long" className="bg-slate-100 dark:bg-gray-900">
+      <div className="px-6 py-12 sm:px-10 md:px-16 lg:px-20"> {/* Increased padding */}
         <div className="mx-auto max-w-screen-xl text-center">
-          <h2 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white transition duration-500 ease-in-out hover:text-blue-500">Customers Rely on Kenosha AI for:</h2>
-          <div className="mt-8 space-y-8 md:space-y-0 md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-lg">
-                  <img src={bullseye} alt="AI-powered Proposal Generation" className="mx-auto mb-4 w-16 h-16" />
-                  <h3 className="mb-2 text-xl font-bold dark:text-white">AI-powered Proposal Generation</h3>
-                  <p className="text-gray-500 dark:text-gray-400">Manage RFI, RFP, vendor assessment and security questionnaire content libraries, automate proposal and questionnaire response generation.</p>
+          <h2 className="mb-8 text-2xl sm:text-3xl md:text-4xl tracking-tight font-bold text-gray-900 dark:text-white"> {/* Reduced font size */}
+            Customers Rely on Kenosha AI for:
+          </h2>
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3"> {/* Increased gap */}
+              <div className="group transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-xl rounded-lg p-8 bg-white dark:bg-gray-800"> {/* Increased padding */}
+                  <img src={bullseye} alt="AI-powered Proposal Generation" className="mx-auto mb-5 w-16 h-16" /> {/* Adjusted margin */}
+                  <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white"> {/* Reduced font size and adjusted margin */}
+                    AI-powered Proposal Generation
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400"> {/* Reduced font size */}
+                    Manage RFI, RFP, vendor assessment, and security questionnaire content libraries, automate proposal and questionnaire response generation.
+                  </p>
               </div>
-              <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-lg">
-                  <img src={document} alt="Informed Consent Form Generation" className="mx-auto mb-4 w-16 h-16" />
-                  <h3 className="mb-2 text-xl font-bold dark:text-white">Informed Consent Form Generation</h3>
-                  <p className="text-gray-500 dark:text-gray-400">Automate country, IRB/EC and site-specific informed consent form (ICF) generation based on SOPs and work instructions directly from the protocol.</p>
+              <div className="group transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-xl rounded-lg p-8 bg-white dark:bg-gray-800">
+                  <img src={document} alt="Informed Consent Form Generation" className="mx-auto mb-5 w-16 h-16" />
+                  <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
+                    Informed Consent Form Generation
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Automate country, IRB/EC, and site-specific informed consent form (ICF) generation based on SOPs and work instructions directly from the protocol.
+                  </p>
               </div>
-              <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-lg">
-                  <img src={compass} alt="Regulatory Guidance Navigation" className="mx-auto mb-4 w-16 h-16" />
-                  <h3 className="mb-2 text-xl font-bold dark:text-white">Regulatory Guidance Navigation</h3>
-                  <p className="text-gray-500 dark:text-gray-400">Enable up-to-date regulatory guidance navigation with natural language queries, including comparisons between regulatory agencies.</p>
+              <div className="group transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-xl rounded-lg p-8 bg-white dark:bg-gray-800">
+                  <img src={compass} alt="Regulatory Guidance Navigation" className="mx-auto mb-5 w-16 h-16" />
+                  <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
+                    Regulatory Guidance Navigation
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Enable up-to-date regulatory guidance navigation with natural language queries, including comparisons between regulatory agencies.
+                  </p>
               </div>
           </div>
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-12 text-center"> {/* Increased margin */}
           <button
             onClick={() => scrollToSection('#contact')}
             style={{ backgroundColor: '#171c84', boxShadow: '0 4px 14px 0 rgba(0, 118, 255, 0.39)' }}
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 sm:w-auto sm:text-sm transition duration-500 ease-in-out transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-8 py-4 text-md font-medium text-center text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 sm:w-auto sm:text-sm transition duration-500 ease-in-out transform hover:-translate-y-1" 
           >
             Request Demo
           </button>
